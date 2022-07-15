@@ -18,7 +18,7 @@ export default function Calculator() {
     <div className="wrapper">
       {/* estrutura da calculadora -  modelo escolhido é o da calculadora do IOS*/}
       <div className="display">
-        <h3>000</h3>
+        <h3>{num}</h3>
       </div>
       <div className="keyBoard">
         {/* fileira 1 */}
