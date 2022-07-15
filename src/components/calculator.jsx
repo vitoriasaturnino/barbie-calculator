@@ -118,7 +118,7 @@ export default function Calculator() {
         <br />
 
         {/* fileira 5 */}
-        <button value={0} onClick={inputNum}>
+        <button id="double_button" value={0} onClick={inputNum}>
           0
         </button>
         <button value={"."} onClick={inputNum}>
