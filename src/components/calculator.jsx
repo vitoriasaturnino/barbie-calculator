@@ -64,67 +64,94 @@ export default function Calculator() {
       </div>
       <div className="keyboard">
         {/* fileira 1 */}
-        <button onClick={allClear}>AC</button>
-        <button onClick={changeSign}>+/-</button>
-        <button onClick={percentage}>%</button>
-        <button value={"/"} onClick={operatorHandler}>
+        <button className="special_buttons" onClick={allClear}>
+          AC
+        </button>
+        <button className="special_buttons" onClick={changeSign}>
+          +/-
+        </button>
+        <button className="special_buttons" onClick={percentage}>
+          %
+        </button>
+        <button
+          className="operator_buttons"
+          value={"/"}
+          onClick={operatorHandler}
+        >
           /
         </button>
         <br />
 
         {/* fileira 2 */}
-        <button value={7} onClick={inputNum}>
+        <button className="number_buttons" value={7} onClick={inputNum}>
           7
         </button>
-        <button value={8} onClick={inputNum}>
+        <button className="number_buttons" value={8} onClick={inputNum}>
           8
         </button>
-        <button value={9} onClick={inputNum}>
+        <button className="number_buttons" value={9} onClick={inputNum}>
           9
         </button>
-        <button value={"x"} onClick={operatorHandler}>
+        <button
+          className="operator_buttons"
+          value={"x"}
+          onClick={operatorHandler}
+        >
           x
         </button>
         <br />
 
         {/* fileira 3 */}
-        <button value={4} onClick={inputNum}>
+        <button className="number_buttons" value={4} onClick={inputNum}>
           4
         </button>
-        <button value={5} onClick={inputNum}>
+        <button className="number_buttons" value={5} onClick={inputNum}>
           5
         </button>
-        <button value={6} onClick={inputNum}>
+        <button className="number_buttons" value={6} onClick={inputNum}>
           6
         </button>
-        <button value={"-"} onClick={operatorHandler}>
+        <button
+          className="operator_buttons"
+          value={"-"}
+          onClick={operatorHandler}
+        >
           -
         </button>
         <br />
 
         {/* fileira 4 */}
-        <button value={1} onClick={inputNum}>
+        <button className="number_buttons" value={1} onClick={inputNum}>
           1
         </button>
-        <button value={2} onClick={inputNum}>
+        <button className="number_buttons" value={2} onClick={inputNum}>
           2
         </button>
-        <button value={3} onClick={inputNum}>
+        <button className="number_buttons" value={3} onClick={inputNum}>
           3
         </button>
-        <button value={"+"} onClick={operatorHandler}>
+        <button
+          className="operator_buttons"
+          value={"+"}
+          onClick={operatorHandler}
+        >
           +
         </button>
         <br />
 
         {/* fileira 5 */}
-        <button id="double_button" value={0} onClick={inputNum}>
+        <button
+          id="double_button"
+          className="number_buttons"
+          value={0}
+          onClick={inputNum}
+        >
           0
         </button>
-        <button value={"."} onClick={inputNum}>
+        <button className="number_buttons" value={"."} onClick={inputNum}>
           ,
         </button>
-        <button value={"="} onClick={calculate}>
+        <button className="operator_buttons" value={"="} onClick={calculate}>
           =
         </button>
         <br />

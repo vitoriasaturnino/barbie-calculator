@@ -49,3 +49,18 @@ button {
   text-align: left;
   padding-left: 30px;
 }
+
+.special_buttons {
+  background-color: #ff26aa;
+  color: #ffffff;
+}
+
+.operator_buttons {
+  background-color: #d619f8;
+  color: #ffffff;
+}
+
+.number_buttons {
+  background-color: #eb2ce2;
+  color: #ffffff;
+}
