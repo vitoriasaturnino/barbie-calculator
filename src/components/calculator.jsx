@@ -4,6 +4,20 @@ import "./calculatorStyle.css";
 export default function Calculator() {
   const [num, setNum] = useState(0);
 
+  // AC button
+  function allClear() {
+    setNum(0);
+  }
+
+  // +/- button
+  function changeSign() {
+    if (setNum(num) === -num) {
+      setNum(num);
+    } else {
+      setNum(-num);
+    }
+  }
+
   // input number
   function inputNum(e) {
     let numInput = e.target.value;
@@ -22,8 +36,8 @@ export default function Calculator() {
       </div>
       <div className="keyBoard">
         {/* fileira 1 */}
-        <button>AC</button>
-        <button>+/-</button>
+        <button onClick={allClear}>AC</button>
+        <button onClick={changeSign}>+/-</button>
         <button>%</button>
         <button value={"/"}>/</button>
         <br />
