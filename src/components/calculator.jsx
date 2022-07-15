@@ -92,7 +92,9 @@ export default function Calculator() {
         <button value={0} onClick={inputNum}>
           0
         </button>
-        <button value={"."}>,</button>
+        <button value={"."} onClick={inputNum}>
+          ,
+        </button>
         <button value={"="}>=</button>
         <br />
       </div>
