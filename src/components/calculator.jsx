@@ -103,11 +103,11 @@ export default function Calculator() {
         <br />
 
         {/* fileira 4 */}
-        <button value={2} onClick={inputNum}>
-          2
-        </button>
         <button value={1} onClick={inputNum}>
           1
+        </button>
+        <button value={2} onClick={inputNum}>
+          2
         </button>
         <button value={3} onClick={inputNum}>
           3
