@@ -62,7 +62,7 @@ export default function Calculator() {
       <div className="display">
         <h3>{num}</h3>
       </div>
-      <div className="keyBoard">
+      <div className="keyboard">
         {/* fileira 1 */}
         <button onClick={allClear}>AC</button>
         <button onClick={changeSign}>+/-</button>

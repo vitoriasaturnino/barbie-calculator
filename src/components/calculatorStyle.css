@@ -10,3 +10,8 @@ html {
   border-radius: 1em;
   margin: 100px;
 }
+
+.keyboard {
+  margin-top: 5px;
+  padding: 5px;
+}
