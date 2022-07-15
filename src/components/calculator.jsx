@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./calculatorStyle.css";
 
 export default function Calculator() {
+  const [num, setNum] = useState(0);
+
+  // input number
+  function inputNum(e) {
+    let numInput = e.target.value;
+    if (num === 0) {
+      setNum(numInput);
+    } else {
+      setNum(num + numInput);
+    }
+  }
+
   return (
     <div className="wrapper">
       {/* estrutura da calculadora -  modelo escolhido é o da calculadora do IOS*/}
@@ -13,34 +25,56 @@ export default function Calculator() {
         <button>AC</button>
         <button>+/-</button>
         <button>%</button>
-        <button>/</button>
+        <button value={"/"}>/</button>
         <br />
 
         {/* fileira 2 */}
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>x</button>
+        <button value={7} onClick={inputNum}>
+          7
+        </button>
+        <button value={8} onClick={inputNum}>
+          8
+        </button>
+        <button value={9} onClick={inputNum}>
+          9
+        </button>
+        <button value={"x"} onClick={inputNum}>
+          x
+        </button>
         <br />
 
         {/* fileira 3 */}
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>-</button>
+        <button value={4} onClick={inputNum}>
+          4
+        </button>
+        <button value={5} onClick={inputNum}>
+          5
+        </button>
+        <button value={6} onClick={inputNum}>
+          6
+        </button>
+        <button value={"-"}>-</button>
         <br />
 
         {/* fileira 4 */}
-        <button>2</button>
-        <button>1</button>
-        <button>3</button>
-        <button>+</button>
+        <button value={2} onClick={inputNum}>
+          2
+        </button>
+        <button value={1} onClick={inputNum}>
+          1
+        </button>
+        <button value={3} onClick={inputNum}>
+          3
+        </button>
+        <button value={"+"}>+</button>
         <br />
 
         {/* fileira 5 */}
-        <button>0</button>
-        <button>,</button>
-        <button>=</button>
+        <button value={0} onClick={inputNum}>
+          0
+        </button>
+        <button value={"."}>,</button>
+        <button value={"="}>=</button>
         <br />
       </div>
     </div>
