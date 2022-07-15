@@ -1,3 +1,12 @@
 html {
   background-color: #ffe6ff;
 }
+
+.wrapper {
+  background-color: #ffa5ff;
+  width: 350px;
+  height: 590px;
+  padding: 12px;
+  border-radius: 1em;
+  margin: 100px;
+}
