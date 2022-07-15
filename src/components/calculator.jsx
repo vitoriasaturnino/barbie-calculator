@@ -18,6 +18,11 @@ export default function Calculator() {
     }
   }
 
+  // % button
+  function percentage() {
+    setNum(num / 100);
+  }
+
   // input number
   function inputNum(e) {
     let numInput = e.target.value;
@@ -38,7 +43,7 @@ export default function Calculator() {
         {/* fileira 1 */}
         <button onClick={allClear}>AC</button>
         <button onClick={changeSign}>+/-</button>
-        <button>%</button>
+        <button onClick={percentage}>%</button>
         <button value={"/"}>/</button>
         <br />
 
