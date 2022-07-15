@@ -2,6 +2,12 @@ html {
   background-color: #ffe6ff;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .wrapper {
   background-color: #ffa5ff;
   width: 350px;
