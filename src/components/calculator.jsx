@@ -3,6 +3,8 @@ import "./calculatorStyle.css";
 
 export default function Calculator() {
   const [num, setNum] = useState(0);
+  const [oldNum, setOldNum] = useState(0);
+  const [operator, setOperator] = useState();
 
   // AC button
   function allClear() {
@@ -33,6 +35,14 @@ export default function Calculator() {
     }
   }
 
+  // função que quarda o primeiro numero, o sinal e o segundo numero para realizar a operação matemática
+  function operatorHandler(e) {
+    let operatorInput = e.target.value;
+    setOperator(operatorInput);
+    setOldNum(num);
+    setNum(0);
+  }
+
   return (
     <div className="wrapper">
       {/* estrutura da calculadora -  modelo escolhido é o da calculadora do IOS*/}
@@ -44,7 +54,9 @@ export default function Calculator() {
         <button onClick={allClear}>AC</button>
         <button onClick={changeSign}>+/-</button>
         <button onClick={percentage}>%</button>
-        <button value={"/"}>/</button>
+        <button value={"/"} onClick={operatorHandler}>
+          /
+        </button>
         <br />
 
         {/* fileira 2 */}
@@ -57,7 +69,7 @@ export default function Calculator() {
         <button value={9} onClick={inputNum}>
           9
         </button>
-        <button value={"x"} onClick={inputNum}>
+        <button value={"x"} onClick={operatorHandler}>
           x
         </button>
         <br />
@@ -72,7 +84,9 @@ export default function Calculator() {
         <button value={6} onClick={inputNum}>
           6
         </button>
-        <button value={"-"}>-</button>
+        <button value={"-"} onClick={operatorHandler}>
+          -
+        </button>
         <br />
 
         {/* fileira 4 */}
@@ -85,7 +99,9 @@ export default function Calculator() {
         <button value={3} onClick={inputNum}>
           3
         </button>
-        <button value={"+"}>+</button>
+        <button value={"+"} onClick={operatorHandler}>
+          +
+        </button>
         <br />
 
         {/* fileira 5 */}
