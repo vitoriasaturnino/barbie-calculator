@@ -43,6 +43,19 @@ export default function Calculator() {
     setNum(0);
   }
 
+  // = buton
+  function calculate() {
+    if (operator === "/") {
+      setNum(parseFloat(oldNum) / parseFloat(num));
+    } else if (operator === "x") {
+      setNum(parseFloat(oldNum) * parseFloat(num));
+    } else if (operator === "-") {
+      setNum(parseFloat(oldNum) - parseFloat(num));
+    } else {
+      setNum(parseFloat(oldNum) + parseFloat(num));
+    }
+  }
+
   return (
     <div className="wrapper">
       {/* estrutura da calculadora -  modelo escolhido é o da calculadora do IOS*/}
@@ -111,7 +124,9 @@ export default function Calculator() {
         <button value={"."} onClick={inputNum}>
           ,
         </button>
-        <button value={"="}>=</button>
+        <button value={"="} onClick={calculate}>
+          =
+        </button>
         <br />
       </div>
     </div>
