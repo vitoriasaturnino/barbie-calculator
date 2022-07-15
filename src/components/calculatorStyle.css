@@ -64,3 +64,8 @@ button {
   background-color: #eb2ce2;
   color: #ffffff;
 }
+
+footer {
+  font-size: 18px;
+  margin: 80px;
+}
