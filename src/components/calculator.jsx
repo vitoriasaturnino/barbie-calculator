@@ -155,6 +155,7 @@ export default function Calculator() {
           =
         </button>
         <br />
+        <footer>Feito com 💗 vim</footer>
       </div>
     </div>
   );
